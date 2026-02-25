@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>D&G Garden · Dream & Garden · Fond du Sac · Ultra Luxury Wedding Estate</title>
-  <!-- Ultra-luxury fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D&G GARDEN · DREAM & GARDEN · FOND DU SAC</title>
+  <!-- Premium Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700;800&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- AOS -->
+  <!-- AOS Scroll Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+    /* ----- RESET & GLOBAL ----- */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      cursor: none;
     }
 
     body {
-      background-color: #070605;
+      background-color: #0a0806;
       font-family: 'Montserrat', sans-serif;
       font-weight: 200;
       color: #e5d3b0;
-      line-height: 1.7;
+      line-height: 1.8;
       overflow-x: hidden;
     }
 
@@ -34,7 +34,7 @@
       color: #fff6e5;
     }
 
-    /* ===== CUSTOM CURSOR – DIAMOND/GOLD ===== */
+    /* ===== CUSTOM LUXURY CURSOR ===== */
     .cursor-main {
       position: fixed;
       width: 45px;
@@ -45,7 +45,7 @@
       transform: translate(-50%, -50%);
       transition: width 0.2s, height 0.2s;
       z-index: 9999;
-      backdrop-filter: invert(10%) blur(1px);
+      backdrop-filter: invert(5%) blur(1px);
       box-shadow: 0 0 40px #d4af37;
     }
 
@@ -53,25 +53,12 @@
       position: fixed;
       width: 10px;
       height: 10px;
-      background: #f9f2d9;
+      background: #d4af37;
       border-radius: 50%;
       pointer-events: none;
       transform: translate(-50%, -50%);
       z-index: 10000;
-      box-shadow: 0 0 30px #d4af37, 0 0 60px #e5c687;
-    }
-
-    .cursor-trail {
-      position: fixed;
-      width: 15px;
-      height: 15px;
-      background: radial-gradient(circle, #fffacd, #d4af37);
-      border-radius: 50%;
-      pointer-events: none;
-      opacity: 0.3;
-      transform: translate(-50%, -50%);
-      z-index: 9998;
-      filter: blur(3px);
+      box-shadow: 0 0 30px #d4af37;
     }
 
     /* ===== INTRO LOADER ===== */
@@ -81,12 +68,12 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: #070605;
+      background: #0a0806;
       display: flex;
       align-items: center;
       justify-content: center;
       z-index: 10001;
-      animation: loaderFade 3s ease-out forwards;
+      animation: loaderFade 2.8s ease-out forwards;
     }
 
     @keyframes loaderFade {
@@ -100,7 +87,7 @@
       height: 160px;
       background: linear-gradient(135deg, #d4af37, #f9f0d1, #d4af37);
       clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-      animation: diamondSpin 2s infinite;
+      animation: diamondSpin 2.2s infinite ease-in-out;
       box-shadow: 0 0 100px #d4af37;
     }
 
@@ -110,30 +97,31 @@
       100% { transform: rotate(360deg) scale(1); }
     }
 
-    /* ===== HERO ===== */
+    /* ===== HERO SECTION ===== */
     .hero {
       position: relative;
       height: 100vh;
+      min-height: 800px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: #080706;
+      background: #0a0806;
       overflow: hidden;
     }
 
-    .hero-bg {
+    .hero-bg-texture {
       position: absolute;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at 30% 50%, rgba(212,175,55,0.1) 0%, transparent 50%),
+      background: radial-gradient(circle at 30% 50%, rgba(212,175,55,0.1) 0%, transparent 60%),
                   repeating-linear-gradient(45deg, rgba(212,175,55,0.02) 0px, rgba(212,175,55,0.02) 2px, transparent 2px, transparent 20px);
-      animation: slowDrift 40s infinite;
+      animation: slowDrift 30s infinite alternate;
     }
 
     @keyframes slowDrift {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.3); }
+      0% { transform: scale(1); opacity: 0.5; }
+      100% { transform: scale(1.2); opacity: 1; }
     }
 
     .hero-content {
@@ -141,23 +129,25 @@
       z-index: 2;
       max-width: 1200px;
       padding: 20px;
-      animation: heroReveal 2s;
+      animation: heroReveal 2.2s ease-out;
     }
 
     @keyframes heroReveal {
-      0% { opacity: 0; transform: translateY(50px); filter: blur(10px); }
+      0% { opacity: 0; transform: translateY(60px); filter: blur(12px); }
       100% { opacity: 1; transform: translateY(0); filter: blur(0); }
     }
 
     .hero-pre {
       font-size: 1rem;
       letter-spacing: 1em;
+      text-transform: uppercase;
       color: #d4af37;
       margin-bottom: 20px;
+      font-weight: 300;
     }
 
     .hero-title {
-      font-size: clamp(4rem, 15vw, 9rem);
+      font-size: clamp(4.5rem, 15vw, 9rem);
       font-weight: 200;
       line-height: 1;
       color: #fffcf0;
@@ -166,10 +156,10 @@
 
     .hero-title span {
       display: block;
-      font-size: 0.35em;
+      font-size: 0.4em;
       letter-spacing: 0.5em;
       color: #e5c687;
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
     .hero-divider {
@@ -177,115 +167,131 @@
       height: 2px;
       background: linear-gradient(90deg, transparent, #d4af37, #f9eac3, #d4af37, transparent);
       margin: 30px auto;
-      animation: shimmer 3s infinite;
+      background-size: 200% 100%;
+      animation: shimmerLine 4s infinite;
     }
 
-    @keyframes shimmer {
+    @keyframes shimmerLine {
       0% { background-position: -200% 0; }
       100% { background-position: 200% 0; }
     }
 
     .hero-sub {
       font-size: 1.3rem;
+      font-weight: 200;
       max-width: 700px;
-      margin: 0 auto 40px;
+      margin: 0 auto 50px;
       color: #d4cbb8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 15px;
-      padding: 18px 50px;
+      padding: 18px 55px;
       border: 1px solid #d4af37;
       background: transparent;
-      color: #fff;
+      color: #fff6e5;
       text-decoration: none;
+      font-weight: 300;
       letter-spacing: 0.2em;
-      font-size: 0.9rem;
-      transition: all 0.5s;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      transition: all 0.5s ease;
       position: relative;
       overflow: hidden;
     }
 
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+      transition: left 0.6s;
+    }
+
     .btn:hover {
       background: #d4af37;
-      color: #000;
+      color: #0a0806;
       transform: translateY(-5px);
-      box-shadow: 0 20px 40px #d4af37;
+      box-shadow: 0 20px 40px -10px #d4af37;
+    }
+
+    .btn:hover::before {
+      left: 100%;
     }
 
     .btn-gold {
       background: #d4af37;
-      color: #000;
+      color: #0a0806;
     }
 
-    /* ===== EASY IMAGE PLACEMENT ===== */
-    /* JUST REPLACE the URL inside url() with your image path */
-    .img-main-venue {
+    /* ===== YOUR IMAGES WITH EXACT PATHS ===== */
+    .image-main {
       width: 100%;
-      height: 600px;
-      background: linear-gradient(145deg, #1e1a14, #0f0d0a);
+      height: 650px;
+      background-image: url('images/po.jpg');
       background-size: cover;
       background-position: center;
-      border: 1px solid #d4af37;
-      transition: all 0.5s;
-      /* WHEN YOU HAVE YOUR IMAGE, UNCOMMENT THIS LINE AND ADD YOUR PATH: */
-      /* background-image: url('images/po.jpg'); */
+      border: 2px solid #d4af37;
+      box-shadow: 0 30px 50px -20px rgba(212,175,55,0.3);
+      transition: transform 0.5s, box-shadow 0.5s;
+      margin: 100px 0;
     }
 
-    .img-villa {
+    .image-main:hover {
+      transform: scale(1.02);
+      box-shadow: 0 40px 70px -20px #d4af37;
+    }
+
+    .image-villa {
       width: 100%;
-      height: 600px;
-      background: linear-gradient(145deg, #1e1a14, #0f0d0a);
+      height: 650px;
+      background-image: url('images/po.jpg');
       background-size: cover;
       background-position: center;
-      border: 1px solid #d4af37;
-      /* background-image: url('your-villa.jpg'); */
+      border: 2px solid #d4af37;
+      box-shadow: 0 30px 50px -20px rgba(212,175,55,0.3);
+      transition: transform 0.5s, box-shadow 0.5s;
+      margin: 100px 0;
     }
 
-    .img-gallery-1, .img-gallery-2, .img-gallery-3, .img-gallery-4 {
+    .image-villa:hover {
+      transform: scale(1.02);
+      box-shadow: 0 40px 70px -20px #d4af37;
+    }
+
+    .image-gallery1, .image-gallery2, .image-gallery3, .image-gallery4 {
       width: 100%;
       height: 450px;
-      background: linear-gradient(145deg, #1e1a14, #0f0d0a);
+      background-image: url('images/po.jpg');
       background-size: cover;
       background-position: center;
-      border: 1px solid #d4af37;
-      /* background-image: url('your-gallery-image.jpg'); */
+      border: 2px solid #d4af37;
+      box-shadow: 0 20px 40px -15px rgba(212,175,55,0.3);
+      transition: transform 0.5s, box-shadow 0.5s;
     }
 
-    /* Placeholder style until images are added */
-    .img-main-venue::after, .img-villa::after,
-    .img-gallery-1::after, .img-gallery-2::after,
-    .img-gallery-3::after, .img-gallery-4::after {
-      content: "✦ READY FOR YOUR IMAGE ✦";
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      width: 100%;
-      color: #d4af37;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      letter-spacing: 0.2em;
-      background: rgba(0,0,0,0.3);
-      backdrop-filter: blur(2px);
+    .image-gallery1:hover, .image-gallery2:hover, .image-gallery3:hover, .image-gallery4:hover {
+      transform: scale(1.03);
+      box-shadow: 0 30px 60px -15px #d4af37;
     }
 
-    .img-villa::after {
-      content: "✦ ADD VILLA PHOTO HERE ✦";
-    }
-
-    .img-gallery-1::after { content: "✦ GALLERY 1 ✦"; }
-    .img-gallery-2::after { content: "✦ GALLERY 2 ✦"; }
-    .img-gallery-3::after { content: "✦ GALLERY 3 ✦"; }
-    .img-gallery-4::after { content: "✦ GALLERY 4 ✦"; }
-
-    /* ===== SECTIONS ===== */
+    /* ===== CONTAINER ===== */
     .container {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 0 40px;
+      padding: 0 50px;
     }
 
     section {
@@ -300,15 +306,17 @@
     .section-eyebrow {
       font-size: 0.8rem;
       letter-spacing: 0.8em;
+      text-transform: uppercase;
       color: #d4af37;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .section-title {
-      font-size: clamp(3rem, 6vw, 5rem);
+      font-size: clamp(3.2rem, 7vw, 5.2rem);
       font-weight: 200;
       color: #fffcf0;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      text-transform: uppercase;
     }
 
     .section-divider {
@@ -318,55 +326,57 @@
       margin: 0 auto;
     }
 
-    /* ===== STORY BLOCKS ===== */
-    .story-block {
-      background: rgba(15,13,10,0.7);
+    /* ===== STORY CARDS ===== */
+    .story-card {
+      background: rgba(15, 13, 10, 0.7);
       backdrop-filter: blur(12px);
-      border: 1px solid rgba(212,175,55,0.3);
+      border: 1px solid rgba(212, 175, 55, 0.3);
       padding: 70px 60px;
       margin-bottom: 50px;
       transition: all 0.5s;
     }
 
-    .story-block:hover {
+    .story-card:hover {
       border-color: #d4af37;
       transform: translateY(-10px);
-      box-shadow: 0 50px 80px -30px #d4af37;
+      box-shadow: 0 50px 70px -30px #d4af37;
     }
 
-    .story-block h3 {
+    .story-card h3 {
       font-size: 2.8rem;
+      color: #d4af37;
       margin-bottom: 25px;
       position: relative;
       display: inline-block;
     }
 
-    .story-block h3:after {
+    .story-card h3:after {
       content: '';
       position: absolute;
-      bottom: -5px;
+      bottom: -8px;
       left: 0;
       width: 60px;
       height: 1px;
       background: #d4af37;
     }
 
-    .story-block p {
+    .story-card p {
       font-size: 1.2rem;
       color: #d4cbb8;
       margin-bottom: 20px;
+      line-height: 1.8;
     }
 
-    .story-block strong {
+    .story-card strong {
       color: #d4af37;
       font-weight: 400;
     }
 
-    /* ===== WHY CHOOSE US – 10 REASONS ===== */
+    /* ===== REASONS GRID ===== */
     .reasons-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
+      gap: 25px;
       margin: 60px 0;
     }
 
@@ -384,9 +394,9 @@
     .reason-card {
       background: #0f0e0c;
       border: 1px solid #2a251e;
-      padding: 40px 20px;
+      padding: 45px 25px;
       text-align: center;
-      transition: all 0.4s;
+      transition: all 0.5s;
     }
 
     .reason-card:hover {
@@ -396,19 +406,19 @@
     }
 
     .reason-icon {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       color: #d4af37;
       margin-bottom: 20px;
     }
 
     .reason-card h4 {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: #fff6e5;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .reason-card p {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: #b5aa94;
     }
 
@@ -420,20 +430,32 @@
       margin-top: 60px;
     }
 
+    @media (max-width: 700px) {
+      .villa-features {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .villa-card {
       background: #0f0e0c;
       border: 1px solid #2a251e;
-      padding: 50px;
+      padding: 60px 50px;
+      transition: 0.5s;
+    }
+
+    .villa-card:hover {
+      border-color: #d4af37;
+      transform: translateY(-8px);
     }
 
     .villa-card h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-size: 2.2rem;
+      color: #d4af37;
+      margin-bottom: 25px;
     }
 
     .feature-list {
       list-style: none;
-      margin-top: 20px;
     }
 
     .feature-list li {
@@ -442,11 +464,50 @@
       gap: 15px;
       margin-bottom: 15px;
       color: #d4cbb8;
+      font-size: 1.1rem;
     }
 
     .feature-list i {
       color: #d4af37;
-      width: 20px;
+      width: 25px;
+    }
+
+    /* ===== GALLERY GRID ===== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin: 60px 0;
+    }
+
+    @media (max-width: 700px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== PROMISE BAND ===== */
+    .promise-band {
+      background: #0a0806;
+      padding: 140px 40px;
+      text-align: center;
+      border-top: 2px solid #d4af37;
+      border-bottom: 2px solid #d4af37;
+      margin: 180px 0;
+    }
+
+    .promise-band h2 {
+      font-size: clamp(3.5rem, 8vw, 6rem);
+      font-weight: 200;
+      color: #fffcf0;
+      margin-bottom: 30px;
+    }
+
+    .promise-band p {
+      font-size: 1.5rem;
+      color: #d4cbb8;
+      max-width: 800px;
+      margin: 0 auto 40px;
     }
 
     /* ===== TESTIMONIALS ===== */
@@ -454,62 +515,53 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 40px;
+      margin: 80px 0;
+    }
+
+    @media (max-width: 700px) {
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
     }
 
     .testimonial {
       background: #0f0e0c;
-      padding: 50px;
       border: 1px solid #2a251e;
-      font-style: italic;
+      padding: 60px 50px;
+      transition: 0.5s;
+    }
+
+    .testimonial:hover {
+      border-color: #d4af37;
     }
 
     .testimonial i {
       color: #d4af37;
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 20px;
     }
 
     .testimonial p {
       font-size: 1.2rem;
+      font-style: italic;
       margin-bottom: 20px;
     }
 
     .testimonial-author {
       color: #d4af37;
       font-style: normal;
-      font-weight: 300;
-    }
-
-    /* ===== PRICING BAND ===== */
-    .pricing-band {
-      background: #0a0806;
-      padding: 100px;
-      text-align: center;
-      border-top: 1px solid #d4af37;
-      border-bottom: 1px solid #d4af37;
-      margin: 150px 0;
-    }
-
-    .pricing-band h2 {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-    }
-
-    .pricing-band p {
-      font-size: 1.5rem;
-      color: #d4cbb8;
-      max-width: 800px;
-      margin: 0 auto;
     }
 
     /* ===== FOOTER ===== */
     footer {
       background: #050403;
-      padding: 100px 40px 40px;
+      padding: 100px 40px 50px;
       text-align: center;
+      border-top: 1px solid #2a251e;
     }
 
     .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
       font-size: 4rem;
       color: #fff6e5;
       margin-bottom: 20px;
@@ -523,6 +575,30 @@
 
     .footer-phone i {
       margin-right: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #b5aa94;
+      text-decoration: none;
+      letter-spacing: 0.2em;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #d4af37;
+    }
+
+    .copyright {
+      color: #5a4e3a;
+      margin-top: 60px;
     }
 
     /* ===== FLOATING CONTACT ===== */
@@ -547,13 +623,13 @@
       justify-content: center;
       color: #d4af37;
       text-decoration: none;
-      font-size: 1.8rem;
+      font-size: 2rem;
       transition: all 0.5s;
     }
 
     .float-item:hover {
       background: #d4af37;
-      color: #000;
+      color: #0a0806;
       transform: rotate(360deg) scale(1.2);
       box-shadow: 0 0 50px #d4af37;
     }
@@ -564,21 +640,19 @@
   <div class="cursor-main" id="cursorMain"></div>
   <div class="cursor-dot" id="cursorDot"></div>
 
-  <!-- Loader -->
+  <!-- Intro Loader -->
   <div class="intro-loader">
     <div class="loader-diamond"></div>
   </div>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-bg-texture"></div>
     <div class="hero-content">
       <div class="hero-pre">D&G GARDEN</div>
-      <h1 class="hero-title">
-        DREAM & GARDEN<br><span>FOND DU SAC</span>
-      </h1>
+      <h1 class="hero-title">DREAM & GARDEN<span>FOND DU SAC</span></h1>
       <div class="hero-divider"></div>
-      <p class="hero-sub">Where even grandpas find love again • Where singles become couples • Where dreams come true</p>
+      <p class="hero-sub">Where singles find love · Grandpas propose again · Dreams become reality</p>
       <div class="hero-buttons">
         <a href="tel:+23059237053" class="btn"><i class="fas fa-phone-alt"></i> +230 5923 7053</a>
         <a href="https://wa.me/23059237053" class="btn btn-gold"><i class="fab fa-whatsapp"></i> BOOK NOW</a>
@@ -587,8 +661,8 @@
   </section>
 
   <div class="container">
-    <images/po.jpg>
-    <div class="images.po.jpg" data-aos="fade-up"></div>
+    <!-- MAIN VENUE IMAGE - YOUR IMAGE: images/po.jpg -->
+    <div class="image-main" data-aos="fade-up"></div>
 
     <!-- THE STORY -->
     <section data-aos="fade-up">
@@ -598,20 +672,21 @@
         <div class="section-divider"></div>
       </div>
       
-      <div class="story-block">
+      <div class="story-card">
         <h3>The Ultimate Mauritian Wedding Experience</h3>
-        <p>Planning a wedding is stressful. The checklists, the vendors, the worry. But here, <strong>your hustle becomes our hustle</strong>. Your problem? Our problem. From the moment you book, we take over. You just show up and celebrate.</p>
-        <p>This isn't just a venue. It's a masterpiece. A domain where weddings become legends.</p>
+        <p>Planning a wedding is often described as one of the most stressful experiences in a couple's life. The endless checklists, the coordinating of a dozen different vendors, and the constant worry that something might slip through the cracks can easily overshadow the joy of the occasion. But it doesn't have to be this way.</p>
+        <p>There is a venue in Mauritius fundamentally changing how weddings are hosted. We aren't just renting out a room; we are providing a complete, stress‑free masterpiece. From the moment you book with us, our core philosophy takes over: <strong>Your hustle is our hustle. Your problem is our problem.</strong></p>
       </div>
 
-      <div class="story-block">
+      <div class="story-card">
         <h3>Welcome to Paradise</h3>
-        <p>Most venues offer four walls. We offer an <strong>expansive open-air estate</strong> with lush trees and a <strong>massive swimming pool</strong> — a rare crown jewel. Families arrive early, kids swim, guests relax. It's a true family getaway, not just a wedding.</p>
+        <p>Most wedding venues offer four walls and a roof. We offer a true domain. When you step onto the property, you are greeted by an expansive, open‑air environment surrounded by beautiful, lush trees that create a natural, breathtaking backdrop for your special day.</p>
+        <p>But the true crown jewel of the estate—and something incredibly rare for wedding venues—is our <strong>massive swimming pool</strong>. This isn't just a scenic water feature; it is an active part of your celebration. Families can arrive early, and children can safely swim and enjoy themselves before, during, and even after the main wedding events.</p>
       </div>
     </section>
 
-    <!-- VILLA IMAGE -->
-    <div class="images.po.jpg" data-aos="fade-up"></div>
+    <!-- VILLA IMAGE - YOUR IMAGE: images/po.jpg -->
+    <div class="image-villa" data-aos="fade-up"></div>
 
     <!-- THE VILLA -->
     <section data-aos="fade-up">
@@ -621,8 +696,9 @@
         <div class="section-divider"></div>
       </div>
 
-      <div class="story-block">
-        <p>Within the domain lies a <strong>private 4-bedroom villa with its own pool</strong>. A sanctuary for the couple or close family. Each suite is pure luxury. Stay overnight. Wake up to birdsong. Continue the celebration.</p>
+      <div class="story-card">
+        <p>Within the domain lies a <strong>private 4‑bedroom villa with its own swimming pool</strong> — a sanctuary for the wedding couple or close family. Each bedroom is a suite of calm, finished with natural stone and soft lighting. Your guests can stay overnight, relax by the villa's private pool, and wake up to the sound of birds.</p>
+        <p>The villa offers complete privacy: a place to prepare for the ceremony, to steal moments together, or to continue the celebration away from the crowd.</p>
       </div>
 
       <div class="villa-features">
@@ -631,14 +707,16 @@
           <ul class="feature-list">
             <li><i class="fas fa-gem"></i> Master suite with private terrace</li>
             <li><i class="fas fa-gem"></i> Three guest suites, all equal luxury</li>
-            <li><i class="fas fa-gem"></i> En-suite bathrooms, king beds</li>
+            <li><i class="fas fa-gem"></i> En-suite bathrooms, king-size beds</li>
+            <li><i class="fas fa-gem"></i> Customisable configuration</li>
           </ul>
         </div>
         <div class="villa-card">
           <h3>Private Pool</h3>
           <ul class="feature-list">
-            <li><i class="fas fa-gem"></i> 15-metre lap pool</li>
-            <li><i class="fas fa-gem"></i> Teak deck & cabana</li>
+            <li><i class="fas fa-gem"></i> 15‑metre lap pool</li>
+            <li><i class="fas fa-gem"></i> Teak deck and shaded cabana</li>
+            <li><i class="fas fa-gem"></i> Outdoor shower</li>
             <li><i class="fas fa-gem"></i> Evening mood lighting</li>
           </ul>
         </div>
@@ -654,31 +732,31 @@
       </div>
 
       <div class="reasons-grid">
-        <div class="reason-card"><i class="fas fa-crown reason-icon"></i><h4>#1 Royal Treatment</h4><p>You're not a client, you're royalty.</p></div>
-        <div class="reason-card"><i class="fas fa-swimming-pool reason-icon"></i><h4>#2 Massive Pool</h4><p>Rare luxury for unforgettable days.</p></div>
-        <div class="reason-card"><i class="fas fa-home reason-icon"></i><h4>#3 Private Villa</h4><p>4 bedrooms, private pool, stay overnight.</p></div>
-        <div class="reason-card"><i class="fas fa-utensils reason-icon"></i><h4>#4 Top Catering</h4><p>Michelin-level chefs, bespoke menus.</p></div>
-        <div class="reason-card"><i class="fas fa-music reason-icon"></i><h4>#5 DJ & Sound</h4><p>Professional systems, perfect vibe.</p></div>
-        <div class="reason-card"><i class="fas fa-palette reason-icon"></i><h4>#6 Full Decoration</h4><p>Built stage, styled to perfection.</p></div>
-        <div class="reason-card"><i class="fas fa-hand-holding-heart reason-icon"></i><h4>#7 Stress-Free</h4><p>We handle every single detail.</p></div>
-        <div class="reason-card"><i class="fas fa-tags reason-icon"></i><h4>#8 Unbeatable Price</h4><p>Premium quality, best value on island.</p></div>
-        <div class="reason-card"><i class="fas fa-calendar-alt reason-icon"></i><h4>#9 Flexible Dates</h4><p>Change without penalty. Empathy first.</p></div>
-        <div class="reason-card"><i class="fas fa-heart reason-icon"></i><h4>#10 Any Event</h4><p>Big, small, overnight — we do it all.</p></div>
+        <div class="reason-card"><i class="fas fa-crown reason-icon"></i><h4>Royal Treatment</h4><p>You're not a client, you're royalty</p></div>
+        <div class="reason-card"><i class="fas fa-swimming-pool reason-icon"></i><h4>Massive Pool</h4><p>Rare luxury for unforgettable days</p></div>
+        <div class="reason-card"><i class="fas fa-home reason-icon"></i><h4>Private Villa</h4><p>4 bedrooms, private pool, stay overnight</p></div>
+        <div class="reason-card"><i class="fas fa-utensils reason-icon"></i><h4>Top Catering</h4><p>Michelin-level chefs, bespoke menus</p></div>
+        <div class="reason-card"><i class="fas fa-music reason-icon"></i><h4>DJ & Sound</h4><p>Professional systems, perfect vibe</p></div>
+        <div class="reason-card"><i class="fas fa-palette reason-icon"></i><h4>Full Decoration</h4><p>Built stage, styled to perfection</p></div>
+        <div class="reason-card"><i class="fas fa-hand-holding-heart reason-icon"></i><h4>Stress-Free</h4><p>We handle every single detail</p></div>
+        <div class="reason-card"><i class="fas fa-tags reason-icon"></i><h4>Unbeatable Price</h4><p>Premium quality, best value on island</p></div>
+        <div class="reason-card"><i class="fas fa-calendar-alt reason-icon"></i><h4>Flexible Dates</h4><p>Change without penalty. Empathy first</p></div>
+        <div class="reason-card"><i class="fas fa-heart reason-icon"></i><h4>Any Event</h4><p>Big, small, overnight — we do it all</p></div>
       </div>
     </section>
 
-    <!-- GALLERY - 4 IMAGES -->
+    <!-- GALLERY - ALL USING YOUR IMAGE: images/po.jpg -->
     <section data-aos="fade-up">
       <div class="section-header">
         <div class="section-eyebrow">GALLERY</div>
         <h2 class="section-title">Moments at D&G</h2>
         <div class="section-divider"></div>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
-        <div class="images.po.jpg"></div>
-        <div class="images.po.jpg"></div>
-        <div class="images.po.jpg"></div>
-        <div class="images.po.jpg"></div>
+      <div class="gallery-grid">
+        <div class="image-gallery1" data-aos="zoom-in"></div>
+        <div class="image-gallery2" data-aos="zoom-in" data-aos-delay="100"></div>
+        <div class="image-gallery3" data-aos="zoom-in" data-aos-delay="200"></div>
+        <div class="image-gallery4" data-aos="zoom-in" data-aos-delay="300"></div>
       </div>
     </section>
 
@@ -705,24 +783,23 @@
     </section>
   </div>
 
-  <!-- PRICING BAND -->
-  <div class="pricing-band">
+  <!-- PROMISE BAND -->
+  <div class="promise-band" data-aos="fade-up">
     <h2>Still Reading? Stop. Just Book.</h2>
     <p>One call changes your life. Even if you're not married yet — you will be after booking D&G Garden.</p>
-    <a href="https://wa.me/23059237053" class="btn btn-gold" style="margin-top: 40px; display: inline-block;"><i class="fab fa-whatsapp"></i> +230 5923 7053</a>
+    <a href="https://wa.me/23059237053" class="btn btn-gold" style="margin-top: 30px; display: inline-block;"><i class="fab fa-whatsapp"></i> +230 5923 7053</a>
   </div>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">D&G GARDEN</div>
-    <div class="footer-phone">
-      <i class="fas fa-phone-alt"></i> +230 5923 7053
+    <div class="footer-phone"><i class="fas fa-phone-alt"></i> +230 5923 7053</div>
+    <div class="footer-links">
+      <a href="tel:+23059237053">CALL</a>
+      <a href="https://wa.me/23059237053">WHATSAPP</a>
+      <a href="#">EMAIL</a>
     </div>
-    <div class="footer-links" style="margin: 30px 0;">
-      <a href="tel:+23059237053" style="color: #d4af37; margin: 0 20px;">CALL</a>
-      <a href="https://wa.me/23059237053" style="color: #d4af37; margin: 0 20px;">WHATSAPP</a>
-    </div>
-    <div style="color: #5a4e3a;">© 2026 D&G Garden · Dream & Garden · Fond du Sac</div>
+    <div class="copyright">© 2026 D&G Garden · Dream & Garden · Fond du Sac</div>
   </footer>
 
   <!-- FLOATING CONTACT -->
@@ -734,46 +811,35 @@
   <!-- SCRIPTS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1200, once: true });
-
-    // Cursor
-    const cursorMain = document.getElementById('cursorMain');
-    const cursorDot = document.getElementById('cursorDot');
-    const trails = [];
-
-    for (let i = 0; i < 10; i++) {
-      let trail = document.createElement('div');
-      trail.className = 'cursor-trail';
-      document.body.appendChild(trail);
-      trails.push({ el: trail, x: 0, y: 0 });
-    }
-
-    let mouseX = 0, mouseY = 0, index = 0;
-
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      cursorMain.style.left = mouseX + 'px';
-      cursorMain.style.top = mouseY + 'px';
-      cursorDot.style.left = mouseX + 'px';
-      cursorDot.style.top = mouseY + 'px';
-
-      trails[index].x = mouseX;
-      trails[index].y = mouseY;
-      trails[index].el.style.left = mouseX + 'px';
-      trails[index].el.style.top = mouseY + 'px';
-      trails[index].el.style.opacity = '0.6';
-      
-      index = (index + 1) % trails.length;
+    AOS.init({
+      duration: 1200,
+      once: true,
+      offset: 50,
+      easing: 'ease-out-cubic'
     });
 
-    setInterval(() => {
-      trails.forEach(t => {
-        t.el.style.opacity = Math.max(0, parseFloat(t.el.style.opacity) - 0.05);
-      });
-    }, 30);
+    // Custom cursor
+    const cursorMain = document.getElementById('cursorMain');
+    const cursorDot = document.getElementById('cursorDot');
 
-    // Hide cursor on touch
+    document.addEventListener('mousemove', (e) => {
+      cursorMain.style.left = e.clientX + 'px';
+      cursorMain.style.top = e.clientY + 'px';
+      cursorDot.style.left = e.clientX + 'px';
+      cursorDot.style.top = e.clientY + 'px';
+    });
+
+    // Click effect
+    document.addEventListener('mousedown', () => {
+      cursorMain.style.width = '55px';
+      cursorMain.style.height = '55px';
+    });
+    document.addEventListener('mouseup', () => {
+      cursorMain.style.width = '45px';
+      cursorMain.style.height = '45px';
+    });
+
+    // Hide cursor on touch devices
     if ('ontouchstart' in window) {
       cursorMain.style.display = 'none';
       cursorDot.style.display = 'none';
@@ -781,5 +847,3 @@
   </script>
 </body>
 </html>
-
-
