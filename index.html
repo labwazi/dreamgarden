@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>D&G GARDEN · DREAM & GARDEN · FOND DU SAC · MAURITIUS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D&G GARDEN · Dream & Garden · Fond du Sac · Mauritius</title>
   <!-- Premium Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700;800&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- AOS Scroll Animations -->
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    /* ----- RESET & GLOBAL ----- */
     * {
       margin: 0;
       padding: 0;
@@ -19,470 +18,214 @@
     }
 
     body {
-      background-color: #0a0806;
+      background-color: #faf7f2;
       font-family: 'Montserrat', sans-serif;
-      font-weight: 200;
-      color: #e5d3b0;
-      line-height: 1.8;
-      overflow-x: hidden;
+      font-weight: 300;
+      color: #2c2823;
+      line-height: 1.7;
     }
 
     h1, h2, h3, h4 {
       font-family: 'Cormorant Garamond', serif;
-      font-weight: 300;
-      letter-spacing: 0.03em;
-      color: #fff6e5;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: #1a1612;
     }
 
-    /* ===== CUSTOM LUXURY CURSOR ===== */
-    .cursor-main {
-      position: fixed;
-      width: 45px;
-      height: 45px;
-      border: 1px solid #d4af37;
-      border-radius: 50%;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      transition: width 0.2s, height 0.2s;
-      z-index: 9999;
-      backdrop-filter: invert(5%) blur(1px);
-      box-shadow: 0 0 40px #d4af37;
-    }
-
-    .cursor-dot {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      background: #d4af37;
-      border-radius: 50%;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      z-index: 10000;
-      box-shadow: 0 0 30px #d4af37;
-    }
-
-    .cursor-trail {
-      position: fixed;
-      width: 15px;
-      height: 15px;
-      background: radial-gradient(circle, #fffacd, #d4af37);
-      border-radius: 50%;
-      pointer-events: none;
-      opacity: 0.3;
-      transform: translate(-50%, -50%);
-      z-index: 9998;
-      filter: blur(3px);
-    }
-
-    /* ===== INTRO LOADER ===== */
-    .intro-loader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #0a0806;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10001;
-      animation: loaderFade 2.8s ease-out forwards;
-    }
-
-    @keyframes loaderFade {
-      0% { opacity: 1; }
-      70% { opacity: 1; }
-      100% { opacity: 0; visibility: hidden; }
-    }
-
-    .loader-diamond {
-      width: 160px;
-      height: 160px;
-      background: linear-gradient(135deg, #d4af37, #f9f0d1, #d4af37);
-      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-      animation: diamondSpin 2.2s infinite ease-in-out;
-      box-shadow: 0 0 100px #d4af37;
-    }
-
-    @keyframes diamondSpin {
-      0% { transform: rotate(0deg) scale(1); }
-      50% { transform: rotate(180deg) scale(1.2); }
-      100% { transform: rotate(360deg) scale(1); }
-    }
-
-    /* ===== HERO SECTION ===== */
-    .hero {
-      position: relative;
-      height: 100vh;
-      min-height: 800px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: #0a0806;
-      overflow: hidden;
-    }
-
-    .hero-bg-texture {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 30% 50%, rgba(212,175,55,0.1) 0%, transparent 60%),
-                  repeating-linear-gradient(45deg, rgba(212,175,55,0.02) 0px, rgba(212,175,55,0.02) 2px, transparent 2px, transparent 20px);
-      animation: slowDrift 30s infinite alternate;
-    }
-
-    @keyframes slowDrift {
-      0% { transform: scale(1); opacity: 0.5; }
-      100% { transform: scale(1.2); opacity: 1; }
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      padding: 20px;
-      animation: heroReveal 2.2s ease-out;
-    }
-
-    @keyframes heroReveal {
-      0% { opacity: 0; transform: translateY(60px); filter: blur(12px); }
-      100% { opacity: 1; transform: translateY(0); filter: blur(0); }
-    }
-
-    .hero-pre {
-      font-size: 1rem;
-      letter-spacing: 1em;
-      text-transform: uppercase;
-      color: #d4af37;
-      margin-bottom: 20px;
-      font-weight: 300;
-    }
-
-    .hero-title {
-      font-size: clamp(4.5rem, 15vw, 9rem);
-      font-weight: 200;
-      line-height: 1;
-      color: #fffcf0;
-      text-shadow: 0 0 30px rgba(212,175,55,0.3);
-    }
-
-    .hero-title span {
-      display: block;
-      font-size: 0.4em;
-      letter-spacing: 0.5em;
-      color: #e5c687;
-      margin-top: 15px;
-    }
-
-    .hero-divider {
-      width: 200px;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #d4af37, #f9eac3, #d4af37, transparent);
-      margin: 30px auto;
-      background-size: 200% 100%;
-      animation: shimmerLine 4s infinite;
-    }
-
-    @keyframes shimmerLine {
-      0% { background-position: -200% 0; }
-      100% { background-position: 200% 0; }
-    }
-
-    .hero-sub {
-      font-size: 1.3rem;
-      font-weight: 200;
-      max-width: 700px;
-      margin: 0 auto 50px;
-      color: #d4cbb8;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 30px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 15px;
-      padding: 18px 55px;
-      border: 1px solid #d4af37;
-      background: transparent;
-      color: #fff6e5;
-      text-decoration: none;
-      font-weight: 300;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      transition: all 0.5s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
-      transition: left 0.6s;
-    }
-
-    .btn:hover {
-      background: #d4af37;
-      color: #0a0806;
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px -10px #d4af37;
-    }
-
-    .btn:hover::before {
-      left: 100%;
-    }
-
-    .btn-gold {
-      background: #d4af37;
-      color: #0a0806;
-    }
-
-    /* ===== 7 IMAGE PLACEHOLDERS - ALL USING images/po.jpg AS EXAMPLE ===== */
-    /* IMAGE 1: Main Venue / Hero */
-    .image-1 {
-      width: 100%;
-      height: 600px;
-      background-image: url('images/we3.jpg');
-      background-size: cover;
-      background-position: center;
-      border: 2px solid #d4af37;
-      box-shadow: 0 30px 50px -20px rgba(212,175,55,0.3);
-      transition: transform 0.5s, box-shadow 0.5s;
-      margin: 80px 0;
-    }
-
-    /* IMAGE 2: Gardens & Greenery */
-    .image-2 {
-      width: 100%;
-      height: 600px;
-      background-image: url('images/we.jpg');
-      background-size: cover;
-      background-position: center;
-      border: 2px solid #d4af37;
-      box-shadow: 0 30px 50px -20px rgba(212,175,55,0.3);
-      transition: transform 0.5s, box-shadow 0.5s;
-      margin: 80px 0;
-    }
-
-    /* IMAGE 3: Swimming Pool */
-    .image-3 {
-      width: 100%;
-      height: 600px;
-      background-image: url('images/we33.jpg');
-      background-size: cover;
-      background-position: center;
-      border: 2px solid #d4af37;
-      box-shadow: 0 30px 50px -20px rgba(212,175,55,0.3);
-      transition: transform 0.5s, box-shadow 0.5s;
-      margin: 80px 0;
-    }
-
-    /* IMAGE 4: Private Villa Exterior */
-    .image-4 {
-      width: 100%;
-      height: 600px;
-      background-image: url('images/we.jpg');
-      background-size: cover;
-      background-position: center;
-      border: 2px solid #d4af37;
-      box-shadow: 0 30px 50px -20px rgba(212,175,55,0.3);
-      transition: transform 0.5s, box-shadow 0.5s;
-      margin: 80px 0;
-    }
-
-    /* IMAGE 5: Villa Interior / Bedroom */
-    .image-5 {
-      width: 100%;
-      height: 500px;
-      background-image: url('images/po.jpg');
-      background-size: cover;
-      background-position: center;
-      border: 2px solid #d4af37;
-      box-shadow: 0 30px 50px -20px rgba(212,175,55,0.3);
-      transition: transform 0.5s, box-shadow 0.5s;
-      margin: 60px 0;
-    }
-
-    /* IMAGE 6: Professional Kitchen */
-    .image-6 {
-      width: 100%;
-      height: 600px;
-      background-image: url('images/po1.jpg');
-      background-size: cover;
-      background-position: center;
-      border: 2px solid #d4af37;
-      box-shadow: 0 30px 50px -20px rgba(212,175,55,0.3);
-      transition: transform 0.5s, box-shadow 0.5s;
-      margin: 80px 0;
-    }
-
-    /* IMAGE 7: Wedding Setup / Decoration */
-    .image-7 {
-      width: 100%;
-      height: 600px;
-      background-image: url('images/po.jpg');
-      background-size: cover;
-      background-position: center;
-      border: 2px solid #d4af37;
-      box-shadow: 0 30px 50px -20px rgba(212,175,55,0.3);
-      transition: transform 0.5s, box-shadow 0.5s;
-      margin: 80px 0;
-    }
-
-    /* Hover effect for all images */
-    .image-1:hover, .image-2:hover, .image-3:hover, .image-4:hover,
-    .image-5:hover, .image-6:hover, .image-7:hover {
-      transform: scale(1.02);
-      box-shadow: 0 40px 70px -20px #d4af37;
-    }
-
-    /* ===== CONTAINER ===== */
     .container {
-      max-width: 1400px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 50px;
+      padding: 0 24px;
     }
 
-    section {
-      margin: 150px 0;
+    /* ===== HEADER ===== */
+    .header {
+      padding: 30px 0;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    .section-header {
-      text-align: center;
-      margin-bottom: 60px;
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
-    .section-eyebrow {
-      font-size: 0.8rem;
-      letter-spacing: 0.8em;
-      text-transform: uppercase;
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: #1a1612;
+    }
+
+    .logo span {
       color: #d4af37;
+      font-size: 0.9rem;
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.3em;
+    }
+
+    .header-contact {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .header-contact a {
+      color: #1a1612;
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .header-contact i {
+      color: #d4af37;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: #1a1612;
+      line-height: 1.2;
       margin-bottom: 15px;
     }
 
-    .section-title {
-      font-size: clamp(3rem, 6vw, 4.5rem);
-      font-weight: 200;
-      color: #fffcf0;
-      margin-bottom: 20px;
+    .hero h2 span {
+      color: #d4af37;
+      display: block;
+      font-size: 1.8rem;
+      letter-spacing: 0.3em;
+      margin-top: 10px;
     }
 
-    .section-divider {
+    .hero-divider {
       width: 80px;
       height: 2px;
-      background: linear-gradient(90deg, transparent, #d4af37, transparent);
-      margin: 0 auto;
-    }
-
-    /* ===== STORY CARDS ===== */
-    .story-card {
-      background: rgba(15, 13, 10, 0.7);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      padding: 60px 50px;
-      margin-bottom: 40px;
-      transition: all 0.5s;
-    }
-
-    .story-card:hover {
-      border-color: #d4af37;
-      transform: translateY(-5px);
-      box-shadow: 0 40px 60px -30px #d4af37;
-    }
-
-    .story-card h3 {
-      font-size: 2.5rem;
-      color: #d4af37;
-      margin-bottom: 20px;
-      position: relative;
-      display: inline-block;
-    }
-
-    .story-card h3:after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 60px;
-      height: 1px;
       background: #d4af37;
+      margin: 25px auto;
     }
 
-    .story-card p {
+    .hero p {
       font-size: 1.1rem;
-      color: #d4cbb8;
-      margin-bottom: 20px;
-      line-height: 1.8;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #5a5348;
     }
 
-    /* ===== FEATURES GRID ===== */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+    /* ===== IMAGE STYLES - 7 PLACEHOLDERS ===== */
+    .image-container {
+      margin: 50px 0;
+      background: #f0ede8;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      overflow: hidden;
+    }
+
+    .image-1, .image-2, .image-3, .image-4, .image-5, .image-6, .image-7 {
+      width: 100%;
+      height: 500px;
+      background-color: #e5dfd8;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s;
+    }
+
+    /* Mobile height adjustment */
+    @media (max-width: 768px) {
+      .image-1, .image-2, .image-3, .image-4, .image-5, .image-6, .image-7 {
+        height: 300px;
+      }
+    }
+
+    .image-1:hover, .image-2:hover, .image-3:hover, .image-4:hover,
+    .image-5:hover, .image-6:hover, .image-7:hover {
+      transform: scale(1.02);
+    }
+
+    /* ===== SECTION STYLES ===== */
+    .section {
       margin: 60px 0;
     }
 
-    @media (max-width: 900px) {
-      .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 10px;
     }
-    @media (max-width: 600px) {
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: #d4af37;
+    }
+
+    .section-text {
+      font-size: 1.1rem;
+      color: #4a443c;
+      max-width: 800px;
+    }
+
+    /* ===== FEATURE GRID ===== */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 50px 0;
     }
 
     .feature-card {
-      background: #0f0e0c;
-      border: 1px solid #2a251e;
-      padding: 40px 25px;
-      text-align: center;
-      transition: all 0.5s;
+      background: white;
+      padding: 30px 25px;
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+      border: 1px solid #f0ede8;
+      transition: all 0.3s;
     }
 
     .feature-card:hover {
       border-color: #d4af37;
-      transform: translateY(-8px);
-      box-shadow: 0 30px 50px -20px #d4af37;
+      transform: translateY(-5px);
     }
 
     .feature-icon {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       color: #d4af37;
       margin-bottom: 20px;
     }
 
-    .feature-card h4 {
-      font-size: 1.5rem;
-      color: #fff6e5;
+    .feature-card h3 {
+      font-size: 1.4rem;
       margin-bottom: 10px;
     }
 
     .feature-card p {
-      color: #b5aa94;
+      color: #6b645b;
       font-size: 0.95rem;
     }
 
-    /* ===== VILLA FEATURES ===== */
+    /* ===== VILLA GRID ===== */
     .villa-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin: 60px 0;
+      gap: 30px;
+      margin: 40px 0;
     }
 
     @media (max-width: 700px) {
@@ -492,362 +235,330 @@
     }
 
     .villa-card {
-      background: #0f0e0c;
-      border: 1px solid #2a251e;
-      padding: 50px 40px;
-      transition: 0.5s;
-    }
-
-    .villa-card:hover {
-      border-color: #d4af37;
-      transform: translateY(-5px);
+      background: white;
+      padding: 35px;
+      border: 1px solid #f0ede8;
     }
 
     .villa-card h3 {
-      font-size: 2rem;
+      font-size: 1.6rem;
       color: #d4af37;
       margin-bottom: 20px;
     }
 
-    .feature-list {
+    .villa-list {
       list-style: none;
     }
 
-    .feature-list li {
+    .villa-list li {
       display: flex;
       align-items: center;
       gap: 12px;
       margin-bottom: 12px;
-      color: #d4cbb8;
+      color: #4a443c;
     }
 
-    .feature-list i {
+    .villa-list i {
       color: #d4af37;
       width: 20px;
     }
 
-    /* ===== PROMISE BAND ===== */
-    .promise-band {
-      background: #0a0806;
-      padding: 120px 40px;
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: #1a1612;
+      color: white;
+      padding: 80px 0;
+      margin: 80px 0;
       text-align: center;
-      border-top: 2px solid #d4af37;
-      border-bottom: 2px solid #d4af37;
-      margin: 150px 0;
     }
 
-    .promise-band h2 {
-      font-size: clamp(3rem, 7vw, 5rem);
-      font-weight: 200;
-      color: #fffcf0;
-      margin-bottom: 25px;
-    }
-
-    .promise-band p {
-      font-size: 1.3rem;
-      color: #d4cbb8;
-      max-width: 800px;
-      margin: 0 auto 30px;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: #050403;
-      padding: 80px 40px 40px;
-      text-align: center;
-      border-top: 1px solid #2a251e;
-    }
-
-    .footer-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.5rem;
-      color: #fff6e5;
+    .cta-section h2 {
+      font-size: 2.8rem;
+      color: white;
       margin-bottom: 20px;
     }
 
-    .footer-phone {
-      font-size: 2.5rem;
-      color: #d4af37;
-      margin: 30px 0;
+    .cta-section p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #d4cbb8;
     }
 
-    .footer-phone i {
-      margin-right: 15px;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 40px;
-      justify-content: center;
-      margin: 30px 0;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      color: #b5aa94;
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 40px;
+      background: #d4af37;
+      color: #1a1612;
       text-decoration: none;
-      letter-spacing: 0.2em;
-      transition: color 0.3s;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      border: none;
+      transition: all 0.3s;
     }
 
-    .footer-links a:hover {
+    .cta-button:hover {
+      background: #e5c056;
+      transform: translateY(-2px);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #f0ede8;
+      padding: 60px 0 30px;
+      margin-top: 60px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-logo h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .footer-logo p {
+      color: #6b645b;
+    }
+
+    .footer-contact h4 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .footer-contact a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #4a443c;
+      text-decoration: none;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .footer-contact i {
       color: #d4af37;
+      width: 25px;
     }
 
     .copyright {
-      color: #5a4e3a;
-      margin-top: 40px;
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #d4cbb8;
+      color: #6b645b;
+      font-size: 0.9rem;
     }
 
-    /* ===== FLOATING CONTACT ===== */
-    .float-contact {
+    /* ===== FLOATING WHATSAPP ===== */
+    .whatsapp-float {
       position: fixed;
       bottom: 30px;
       right: 30px;
-      z-index: 1000;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .float-item {
-      width: 65px;
-      height: 65px;
-      background: #0f0e0c;
-      border: 2px solid #d4af37;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #d4af37;
+      font-size: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      z-index: 99;
+      transition: all 0.3s;
       text-decoration: none;
-      font-size: 1.8rem;
-      transition: all 0.5s;
     }
 
-    .float-item:hover {
-      background: #d4af37;
-      color: #0a0806;
-      transform: rotate(360deg) scale(1.2);
-      box-shadow: 0 0 50px #d4af37;
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background: #20ba5c;
     }
   </style>
 </head>
 <body>
-  <!-- Custom cursor -->
-  <div class="cursor-main" id="cursorMain"></div>
-  <div class="cursor-dot" id="cursorDot"></div>
-
-  <!-- Intro Loader -->
-  <div class="intro-loader">
-    <div class="loader-diamond"></div>
-  </div>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg-texture"></div>
-    <div class="hero-content">
-      <div class="hero-pre">D&G GARDEN</div>
-      <h1 class="hero-title">DREAM & GARDEN<span>FOND DU SAC</span></h1>
-      <div class="hero-divider"></div>
-      <p class="hero-sub">An exquisite estate where luxury meets nature — your perfect wedding awaits</p>
-      <div class="hero-buttons">
-        <a href="tel:+23059237053" class="btn"><i class="fas fa-phone-alt"></i> +230 5923 7053</a>
-        <a href="https://wa.me/23059237053" class="btn btn-gold"><i class="fab fa-whatsapp"></i> INQUIRE NOW</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <h1>D&G GARDEN</h1>
+        <span>DREAM & GARDEN</span>
+      </div>
+      <div class="header-contact">
+        <a href="tel:+23059237053"><i class="fas fa-phone-alt"></i> +230 5923 7053</a>
+        <a href="https://wa.me/23059237053"><i class="fab fa-whatsapp"></i> WhatsApp</a>
       </div>
     </div>
-  </section>
+  </header>
 
   <div class="container">
-    <!-- INTRODUCTION -->
-    <section data-aos="fade-up">
-      <div class="section-header">
-        <div class="section-eyebrow">WELCOME TO PARADISE</div>
-        <h2 class="section-title">The Ultimate Wedding Estate</h2>
-        <div class="section-divider"></div>
-      </div>
-      <div class="story-card">
-        <p>Planning a wedding is often described as one of the most stressful experiences in a couple's life. But it doesn't have to be this way. At D&G Garden, we've fundamentally changed how weddings are hosted. We aren't just renting out a room; we are providing a complete, stress‑free masterpiece. From the moment you book with us, our core philosophy takes over: <strong>Your hustle is our hustle. Your problem is our problem.</strong></p>
-      </div>
-    </section>
+    <!-- Hero -->
+    <div class="hero">
+      <h2>THE ULTIMATE WEDDING ESTATE<span>FOND DU SAC · MAURITIUS</span></h2>
+      <div class="hero-divider"></div>
+      <p>An exquisite domain where luxury meets nature — your dream wedding awaits</p>
+    </div>
 
     <!-- IMAGE 1: Main Venue -->
-    <div class="image-1" data-aos="fade-up"></div>
-    
-    <section data-aos="fade-up">
-      <div class="story-card">
-        <h3>The Estate</h3>
-        <p>Most wedding venues offer four walls and a roof. We offer a true domain. When you step onto the property, you are greeted by an expansive, open-air environment surrounded by lush, manicured gardens that create a natural, breathtaking backdrop for your special day.</p>
-      </div>
-    </section>
-
-    <!-- IMAGE 2: Gardens & Greenery -->
-    <div class="image-2" data-aos="fade-up"></div>
-    
-    <section data-aos="fade-up">
-      <div class="story-card">
-        <h3>The Gardens</h3>
-        <p>Our expansive gardens are the heart of the estate. Rolling lawns, tropical flora, and hidden pathways create an enchanting atmosphere for your celebration. Whether you dream of an outdoor ceremony under a floral arch or a cocktail hour amidst the greenery, the gardens provide endless possibilities.</p>
-      </div>
-    </section>
-
-    <!-- IMAGE 3: Swimming Pool -->
-    <div class="image-3" data-aos="fade-up"></div>
-    
-    <section data-aos="fade-up">
-      <div class="story-card">
-        <h3>The Grand Swimming Pool</h3>
-        <p>The crown jewel of the estate is our massive swimming pool — a rare feature for wedding venues. This isn't just a scenic water feature; it is an active part of your celebration. Families can arrive early, guests can cool off, and children can swim and enjoy themselves before, during, and after the main wedding events. The pool area is designed for both elegance and enjoyment.</p>
-      </div>
-    </section>
-
-    <!-- IMAGE 4: Private Villa Exterior -->
-    <div class="image-4" data-aos="fade-up"></div>
-    
-    <section data-aos="fade-up">
-      <div class="story-card">
-        <h3>The Private Villa</h3>
-        <p>Within the domain lies a private 4‑bedroom villa — a sanctuary for the wedding couple or close family. Your guests can stay overnight, relax in complete privacy, and wake up to the sounds of nature. Each bedroom is a suite of calm, finished with natural stone and soft lighting.</p>
-      </div>
-
-      <!-- IMAGE 5: Villa Interior / Bedroom -->
-      <div class="image-5" data-aos="fade-up"></div>
-
-      <div class="villa-grid">
-        <div class="villa-card">
-          <h3>Four Luxurious Suites</h3>
-          <ul class="feature-list">
-            <li><i class="fas fa-gem"></i> Master suite with private terrace</li>
-            <li><i class="fas fa-gem"></i> Three guest suites with en-suite bathrooms</li>
-            <li><i class="fas fa-gem"></i> King-size beds with premium linens</li>
-            <li><i class="fas fa-gem"></i> Garden views from every room</li>
-          </ul>
-        </div>
-        <div class="villa-card">
-          <h3>Villa Amenities</h3>
-          <ul class="feature-list">
-            <li><i class="fas fa-gem"></i> Private swimming pool</li>
-            <li><i class="fas fa-gem"></i> Teak deck and loungers</li>
-            <li><i class="fas fa-gem"></i> Outdoor shower</li>
-            <li><i class="fas fa-gem"></i> Evening mood lighting</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- IMAGE 6: Professional Kitchen -->
-    <div class="image-6" data-aos="fade-up"></div>
-    
-    <section data-aos="fade-up">
-      <div class="story-card">
-        <h3>Professional Kitchen & Catering</h3>
-        <p>Our fully equipped professional kitchen allows our top-tier chefs to create culinary masterpieces for your guests. From intimate dinners to grand banquets, we handle every detail of the catering. No outside team needed — we are your single point of contact for the entire event.</p>
-      </div>
-    </section>
-
-    <!-- IMAGE 7: Wedding Setup / Decoration -->
-    <div class="image-7" data-aos="fade-up"></div>
-    
-    <section data-aos="fade-up">
-      <div class="story-card">
-        <h3>The Complete Package</h3>
-        <p>Our comprehensive, all-inclusive package provides: the full venue space with premium tables and chairs; a fully built, beautifully designed stage and complete decoration; top-tier catering with an expert cook; a professional DJ and state-of-the-art sound system. We take charge of every single detail.</p>
-      </div>
-    </section>
-
-    <!-- KEY FEATURES -->
-    <section data-aos="fade-up">
-      <div class="section-header">
-        <div class="section-eyebrow">WHY CHOOSE US</div>
-        <h2 class="section-title">The D&G Garden Difference</h2>
-        <div class="section-divider"></div>
-      </div>
-
-      <div class="features-grid">
-        <div class="feature-card"><i class="fas fa-tree feature-icon"></i><h4>Lush Gardens</h4><p>Expansive greenery throughout</p></div>
-        <div class="feature-card"><i class="fas fa-swimming-pool feature-icon"></i><h4>Grand Pool</h4><p>Massive swimming pool</p></div>
-        <div class="feature-card"><i class="fas fa-home feature-icon"></i><h4>Private Villa</h4><p>4 bedrooms, overnight stays</p></div>
-        <div class="feature-card"><i class="fas fa-utensils feature-icon"></i><h4>Professional Kitchen</h4><p>Full on-site catering</p></div>
-        <div class="feature-card"><i class="fas fa-chair feature-icon"></i><h4>Premium Setup</h4><p>Tables, chairs, full access</p></div>
-        <div class="feature-card"><i class="fas fa-palette feature-icon"></i><h4>Full Decoration</h4><p>Built stage, styled atmosphere</p></div>
-        <div class="feature-card"><i class="fas fa-music feature-icon"></i><h4>DJ & Sound</h4><p>Professional music system</p></div>
-        <div class="feature-card"><i class="fas fa-hand-holding-heart feature-icon"></i><h4>Stress-Free</h4><p>We handle every detail</p></div>
-        <div class="feature-card"><i class="fas fa-calendar-alt feature-icon"></i><h4>Flexible Dates</h4><p>Change without penalty</p></div>
-      </div>
-    </section>
-
-    <!-- A TO Z PACKAGE -->
-    <section data-aos="fade-up">
-      <div class="story-card">
-        <h3>The "A to Z" Package</h3>
-        <p>When we say we handle everything, we mean everything. You do not need to spend your weekends hunting down different suppliers or worrying about whether the DJ will communicate with the caterer. We are your single point of contact for the entire event. You just have to relax and enjoy your day.</p>
-      </div>
-    </section>
-  </div>
-
-  <!-- PROMISE BAND -->
-  <div class="promise-band" data-aos="fade-up">
-    <h2>The Final Promise</h2>
-    <p>You show up. You celebrate. You make memories by the pool, dine on fantastic food, and dance the night away. We handle the rest.</p>
-    <a href="https://wa.me/23059237053" class="btn btn-gold" style="margin-top: 20px; display: inline-block;"><i class="fab fa-whatsapp"></i> +230 5923 7053</a>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo">D&G GARDEN</div>
-    <div class="footer-phone"><i class="fas fa-phone-alt"></i> +230 5923 7053</div>
-    <div class="footer-links">
-      <a href="tel:+23059237053">CALL</a>
-      <a href="https://wa.me/23059237053">WHATSAPP</a>
-      <a href="#">EMAIL</a>
+    <div class="image-container">
+      <div class="image-1" style="background-image: url('images/po.jpg');" data-aos="fade-up"></div>
     </div>
-    <div class="copyright">© 2026 D&G Garden · Dream & Garden · Fond du Sac, Mauritius</div>
+
+    <!-- Introduction -->
+    <div class="section">
+      <h2 class="section-title">Your Hustle Becomes Ours</h2>
+      <p class="section-text">Planning a wedding is stressful. The checklists, the vendors, the worry. But here, your hustle becomes our hustle. Your problem? Our problem. From the moment you book, we take over. You just show up and celebrate.</p>
+    </div>
+
+    <!-- IMAGE 2: Gardens -->
+    <div class="image-container">
+      <div class="image-2" style="background-image: url('images/po.jpg');" data-aos="fade-up"></div>
+    </div>
+
+    <!-- Gardens Section -->
+    <div class="section">
+      <h2 class="section-title">The Gardens</h2>
+      <p class="section-text">Our expansive gardens are the heart of the estate. Rolling lawns, tropical flora, and hidden pathways create an enchanting atmosphere for your celebration. Whether you dream of an outdoor ceremony or a cocktail hour amidst the greenery, the gardens provide endless possibilities.</p>
+    </div>
+
+    <!-- IMAGE 3: Pool -->
+    <div class="image-container">
+      <div class="image-3" style="background-image: url('images/po.jpg');" data-aos="fade-up"></div>
+    </div>
+
+    <!-- Pool Section -->
+    <div class="section">
+      <h2 class="section-title">The Grand Swimming Pool</h2>
+      <p class="section-text">The crown jewel of the estate is our massive swimming pool — a rare feature for wedding venues. Families can arrive early, guests can cool off, and children can swim before, during, and after the main wedding events. Pure luxury and enjoyment.</p>
+    </div>
+
+    <!-- IMAGE 4: Villa Exterior -->
+    <div class="image-container">
+      <div class="image-4" style="background-image: url('images/po.jpg');" data-aos="fade-up"></div>
+    </div>
+
+    <!-- Villa Section -->
+    <div class="section">
+      <h2 class="section-title">The Private 4-Bedroom Villa</h2>
+      <p class="section-text">Within the domain lies a private 4‑bedroom villa — a sanctuary for the wedding couple or close family. Your guests can stay overnight, relax in complete privacy, and wake up to the sounds of nature.</p>
+    </div>
+
+    <!-- IMAGE 5: Villa Interior -->
+    <div class="image-container">
+      <div class="image-5" style="background-image: url('images/po.jpg');" data-aos="fade-up"></div>
+    </div>
+
+    <!-- Villa Features -->
+    <div class="villa-grid">
+      <div class="villa-card">
+        <h3>Four Luxurious Suites</h3>
+        <ul class="villa-list">
+          <li><i class="fas fa-gem"></i> Master suite with private terrace</li>
+          <li><i class="fas fa-gem"></i> Three guest suites with en-suite bathrooms</li>
+          <li><i class="fas fa-gem"></i> King-size beds with premium linens</li>
+          <li><i class="fas fa-gem"></i> Garden views from every room</li>
+        </ul>
+      </div>
+      <div class="villa-card">
+        <h3>Villa Amenities</h3>
+        <ul class="villa-list">
+          <li><i class="fas fa-gem"></i> Private swimming pool</li>
+          <li><i class="fas fa-gem"></i> Teak deck and loungers</li>
+          <li><i class="fas fa-gem"></i> Outdoor shower</li>
+          <li><i class="fas fa-gem"></i> Evening mood lighting</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- IMAGE 6: Kitchen -->
+    <div class="image-container">
+      <div class="image-6" style="background-image: url('images/po.jpg');" data-aos="fade-up"></div>
+    </div>
+
+    <!-- Kitchen Section -->
+    <div class="section">
+      <h2 class="section-title">Professional Kitchen & Catering</h2>
+      <p class="section-text">Our fully equipped professional kitchen allows our top-tier chefs to create culinary masterpieces for your guests. From intimate dinners to grand banquets, we handle every detail. No outside team needed — we are your single point of contact.</p>
+    </div>
+
+    <!-- IMAGE 7: Wedding Setup -->
+    <div class="image-container">
+      <div class="image-7" style="background-image: url('images/po.jpg');" data-aos="fade-up"></div>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="section">
+      <h2 class="section-title">Why Choose D&G Garden</h2>
+      <div class="feature-grid">
+        <div class="feature-card"><i class="fas fa-tree feature-icon"></i><h3>Lush Gardens</h3><p>Expansive greenery throughout the estate</p></div>
+        <div class="feature-card"><i class="fas fa-swimming-pool feature-icon"></i><h3>Grand Pool</h3><p>Massive swimming pool for all to enjoy</p></div>
+        <div class="feature-card"><i class="fas fa-home feature-icon"></i><h3>Private Villa</h3><p>4 bedrooms for overnight stays</p></div>
+        <div class="feature-card"><i class="fas fa-utensils feature-icon"></i><h3>Professional Kitchen</h3><p>Full on-site catering</p></div>
+        <div class="feature-card"><i class="fas fa-chair feature-icon"></i><h3>Premium Setup</h3><p>Tables, chairs, full space access</p></div>
+        <div class="feature-card"><i class="fas fa-palette feature-icon"></i><h3>Full Decoration</h3><p>Built stage, styled atmosphere</p></div>
+        <div class="feature-card"><i class="fas fa-music feature-icon"></i><h3>DJ & Sound</h3><p>Professional music system</p></div>
+        <div class="feature-card"><i class="fas fa-hand-holding-heart feature-icon"></i><h3>Stress-Free</h3><p>We handle every single detail</p></div>
+      </div>
+    </div>
+
+    <!-- A to Z Package -->
+    <div class="section">
+      <h2 class="section-title">The "A to Z" Package</h2>
+      <p class="section-text">When we say we handle everything, we mean everything. You do not need to spend your weekends hunting down different suppliers. We are your single point of contact for the entire event. You just have to relax and enjoy your day.</p>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="cta-section">
+    <div class="container">
+      <h2>The Final Promise</h2>
+      <p>You show up. You celebrate. You make memories by the pool, dine on fantastic food, and dance the night away. We handle the rest.</p>
+      <a href="https://wa.me/23059237053" class="cta-button"><i class="fab fa-whatsapp"></i> BOOK NOW · +230 5923 7053</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <h3>D&G GARDEN</h3>
+          <p>Dream & Garden · Fond du Sac, Mauritius</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <a href="tel:+23059237053"><i class="fas fa-phone-alt"></i> +230 5923 7053</a>
+          <a href="https://wa.me/23059237053"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2026 D&G Garden. All rights reserved.
+      </div>
+    </div>
   </footer>
 
-  <!-- FLOATING CONTACT -->
-  <div class="float-contact">
-    <a href="tel:+23059237053" class="float-item"><i class="fas fa-phone-alt"></i></a>
-    <a href="https://wa.me/23059237053" class="float-item"><i class="fab fa-whatsapp"></i></a>
-  </div>
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/23059237053" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
 
-  <!-- SCRIPTS -->
+  <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 1200,
+      duration: 1000,
       once: true,
-      offset: 50,
-      easing: 'ease-out-cubic'
+      offset: 50
     });
-
-    // Custom cursor
-    const cursorMain = document.getElementById('cursorMain');
-    const cursorDot = document.getElementById('cursorDot');
-
-    document.addEventListener('mousemove', (e) => {
-      cursorMain.style.left = e.clientX + 'px';
-      cursorMain.style.top = e.clientY + 'px';
-      cursorDot.style.left = e.clientX + 'px';
-      cursorDot.style.top = e.clientY + 'px';
-    });
-
-    // Click effect
-    document.addEventListener('mousedown', () => {
-      cursorMain.style.width = '55px';
-      cursorMain.style.height = '55px';
-    });
-    document.addEventListener('mouseup', () => {
-      cursorMain.style.width = '45px';
-      cursorMain.style.height = '45px';
-    });
-
-    // Hide cursor on touch devices
-    if ('ontouchstart' in window) {
-      cursorMain.style.display = 'none';
-      cursorDot.style.display = 'none';
-    }
   </script>
 </body>
 </html>
-
-
